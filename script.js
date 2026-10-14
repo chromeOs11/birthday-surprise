@@ -1248,7 +1248,6 @@ drawParticles();
 
   let selectedSongURL = null;
 
-audio.src = "song.mp3";
   audio.load();
 
 audio.addEventListener("canplay", () => {
