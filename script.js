@@ -1248,6 +1248,8 @@ drawParticles();
 
   let selectedSongURL = null;
 
+audio.src = "song.mp3";
+
   audio.volume = volumeSlider
     ? Number(volumeSlider.value)
     : 0.45;
