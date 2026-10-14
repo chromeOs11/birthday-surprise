@@ -1246,13 +1246,18 @@ drawParticles();
     return;
   }
 
-  let selectedSongURL = "./song.mp3";
+  let selectedSongURL = null;
 
-audio.src = selectedSongURL;
+audio.src = "./song.mp3";
 audio.loop = true;
-audio.load();
+audio.preload = "auto";
 audio.muted = false;
 audio.volume = 0.45;
+audio.load();
+
+audio.play().catch(() => {
+  status.textContent = "Tap Play to start the music";
+});
 
 audio.play().catch(() => {
   status.textContent = "Tap Play to start the music";
