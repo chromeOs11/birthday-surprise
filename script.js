@@ -1246,10 +1246,12 @@ drawParticles();
     return;
   }
 
-  let selectedSongURL = null;
+  let selectedSongURL = "./song.mp3";
 
-  audio.load();
-  audio.muted = false;
+audio.src = selectedSongURL;
+audio.loop = true;
+audio.load();
+audio.muted = false;
 audio.volume = 0.45;
 
 audio.play().catch(() => {
