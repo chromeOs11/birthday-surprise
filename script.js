@@ -1249,6 +1249,12 @@ drawParticles();
   let selectedSongURL = null;
 
   audio.load();
+  audio.muted = false;
+audio.volume = 0.45;
+
+audio.play().catch(() => {
+  status.textContent = "Tap Play to start the music";
+});
 
 audio.addEventListener("canplay", () => {
   status.textContent = "Song ready — press Play";
