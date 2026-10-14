@@ -1317,10 +1317,7 @@ audio.addEventListener("canplay", () => {
 
   // Play or pause the selected song.
   playButton.addEventListener("click", async () => {
-    if (!audio.src) {
-      fileInput.click();
-      return;
-    }
+    
 
     if (!audio.paused) {
       audio.pause();
