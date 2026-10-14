@@ -4,7 +4,7 @@
    ========================================================== */
 
 const CONFIG = {
-  recipientName: "Someone",
+  recipientName: "Kanishka",
   pin: "1410",
 
   story: [
