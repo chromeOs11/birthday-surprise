@@ -1249,6 +1249,11 @@ drawParticles();
   let selectedSongURL = null;
 
 audio.src = "song.mp3";
+  audio.load();
+
+audio.addEventListener("canplay", () => {
+  status.textContent = "Song ready — press Play";
+});
 
   audio.volume = volumeSlider
     ? Number(volumeSlider.value)
